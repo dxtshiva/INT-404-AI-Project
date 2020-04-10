@@ -68,7 +68,7 @@ class snake(object):
                 turn = self.turns[p]
                 c.move(turn[0],turn[1])
                 if i == len(self.body)-1:
-                    self.turns.pop(p)
+                    self.turns.pop(p);
             else:
                 if c.dirnx == -1 and c.pos[0] <= 0: c.pos = (c.rows-1, c.pos[1])
                 elif c.dirnx == 1 and c.pos[0] >= c.rows-1: c.pos = (0,c.pos[1])
