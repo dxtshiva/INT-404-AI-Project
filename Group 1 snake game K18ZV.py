@@ -68,7 +68,7 @@ class snake(object):
                 turn = self.turns[p]
                 c.move(turn[0],turn[1])
                 if i == len(self.body)-1:
-                    self.turns.pop(p)
+                    self.turns.pop(p);
             else:
                 if c.dirnx == -1 and c.pos[0] <= 0: c.pos = (c.rows-1, c.pos[1])
                 elif c.dirnx == 1 and c.pos[0] >= c.rows-1: c.pos = (0,c.pos[1])
@@ -146,7 +146,7 @@ def main():
             snack = cube(randomSnack(rows, s), color=(0,255,0))
         for x in range(len(s.body)):
             if s.body[x].pos in list(map(lambda z:z.pos,s.body[x+1:])):
-                message_box('You Lost!', 'Score: '+str(len(s.body))+'\nPlay again...')
+                message_box('You Lost!', 'Score: '+str(len(s.body))+'\nPlay again...') #if possible use YesNo box instead
                 s.reset((10,10))
                 break
         redrawWindow(win)
